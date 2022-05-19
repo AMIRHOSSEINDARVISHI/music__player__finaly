@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start"
+    tools:context=".MainActivity">
+
+
+<!--    for refreshing layout on swipe from top-->
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toTopOf="@id/nowPlaying"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <!--for buttons-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <!--shuffle Button-->
+                    <Button
+                        android:id="@+id/shuffleBtn"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:contentDescription="@string/shuffle_btn"
+                        android:drawableTop="@drawable/shuffle_icon"
+                        android:text="@string/shuffle_btn"
+                        android:textAllCaps="false"
+                        android:textColor="?colorOnPrimary" />
+                    <!--Favourites Button-->
+                    <Button
+                        android:id="@+id/favouriteBtn"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:contentDescription="@string/favourites_btn"
+                        android:drawableTop="@drawable/favourite_icon"
+                        android:text="@string/favourites_btn"
+                        android:textAllCaps="false"
+                        android:textColor="?colorOnPrimary" />
+                    <!--Playlists Button-->
+                    <Button
+                        android:id="@+id/playlistBtn"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:contentDescription="@string/playlist_btn"
+                        android:drawableTop="@drawable/playlist_icon"
+                        android:text="@string/playlist_btn"
+                        android:textAllCaps="false"
+                        android:textColor="?colorOnPrimary" />
+
+                    <!--Play Next Button-->
+                    <Button
+                        android:id="@+id/playNextBtn"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:contentDescription="@string/playlist_btn"
+                        android:drawableTop="@drawable/play_next_icon"
+                        android:text="@string/play_next"
+                        android:textAllCaps="false"
+                        android:textColor="?colorOnPrimary" />
+
+                </LinearLayout>
+
+                <!--Total Songs Button-->
+                <TextView
+                    android:id="@+id/totalSongs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="@string/total_songs"
+                    android:textColor="?colorOnPrimary" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/musicRV"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scrollbarThumbVertical="@drawable/scroll_bar_icon"
+                    android:scrollbars="vertical" />
+
+            </LinearLayout>
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/nowPlaying"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:name="code.with.cal.music__player__finaly.NowPlaying"
+                tools:layout="@layout/fragment_now_playing"
+                android:visibility="gone"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:headerLayout="@layout/nav_header"
+        app:menu="@menu/nav_menu"/>
+
+</androidx.drawerlayout.widget.DrawerLayout>
