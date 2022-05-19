@@ -78,15 +78,14 @@ fun checkPlaylist(playlist: ArrayList<Music>): ArrayList<Music>{
 }
 
  fun setDialogBtnBackground(context: Context, dialog: AlertDialog){
-     //setting button text
+     //کنترل دکمه
      dialog.getButton(android.app.AlertDialog.BUTTON_POSITIVE)?.setTextColor(
          MaterialColors.getColor(context, R.attr.dialogTextColor, Color.WHITE)
      )
      dialog.getButton(android.app.AlertDialog.BUTTON_NEGATIVE)?.setTextColor(
          MaterialColors.getColor(context, R.attr.dialogTextColor, Color.WHITE)
      )
-
-     //setting button background
+    //یادم باشه بر کنترل پنل پک گراند
      dialog.getButton(android.app.AlertDialog.BUTTON_POSITIVE)?.setBackgroundColor(
          MaterialColors.getColor(context, R.attr.dialogBtnBackground, Color.RED)
      )

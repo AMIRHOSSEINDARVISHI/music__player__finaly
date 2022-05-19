@@ -18,9 +18,6 @@ class ApplicationClass:Application() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){
             val notificationChannel = NotificationChannel(CHANNEL_ID, "Now Playing Song", NotificationManager.IMPORTANCE_HIGH)
             notificationChannel.description = "This is a important channel for showing song!!"
-            //for lockscreen -> test this and let me know.
-//            notificationChannel.importance = NotificationManager.IMPORTANCE_HIGH
-//            notificationChannel.lockscreenVisibility = Notification.VISIBILITY_PUBLIC
 
             val notificationManager = getSystemService(NOTIFICATION_SERVICE) as NotificationManager
             notificationManager.createNotificationChannel(notificationChannel)

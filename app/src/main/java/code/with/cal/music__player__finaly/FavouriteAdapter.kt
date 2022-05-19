@@ -36,7 +36,7 @@ class FavouriteAdapter(private val context: Context, private var musicList: Arra
             .apply(RequestOptions().placeholder(R.drawable.music_player_icon_slash_screen).centerCrop())
             .into(holder.image)
 
-        //when play next music is clicked
+        //زمان که دکمه بعدی رو میزنه چیکار کنه
         if(playNext){
             holder.root.setOnClickListener {
                 val intent = Intent(context, PlayerActivity::class.java)

@@ -132,14 +132,6 @@ class MusicService: Service(), AudioManager.OnAudioFocusChangeListener {
             showNotification(R.drawable.play_icon)
 
         }
-//        else{
-//            //play music
-//            PlayerActivity.binding.playPauseBtnPA.setIconResource(R.drawable.pause_icon)
-//            NowPlaying.binding.playPauseBtnNP.setIconResource(R.drawable.pause_icon)
-//            PlayerActivity.isPlaying = true
-//            mediaPlayer!!.start()
-//            showNotification(R.drawable.pause_icon)
-//        }
     }
 
     //for making persistent

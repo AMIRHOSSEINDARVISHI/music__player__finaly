@@ -163,7 +163,7 @@ class MainActivity : AppCompatActivity() {
         binding.musicRV.adapter = musicAdapter
         binding.totalSongs.text  = "Total Songs : "+musicAdapter.itemCount
 
-        //for refreshing layout on swipe from top
+        //رفرش کردن اهنگ اه وقتی موزیک جدید اد میشه
         binding.refreshLayout.setOnRefreshListener {
             MusicListMA = getAllAudio()
             musicAdapter.updateMusicList(MusicListMA)

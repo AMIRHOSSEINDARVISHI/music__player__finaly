@@ -55,7 +55,7 @@
             android:id="@+id/playlistImgPD"
             android:layout_width="250dp"
             android:layout_height="match_parent"
-            android:src="@drawable/music_player_icon_slash_screen"/>
+            android:src="@drawable/img"/>
         <TextView
             android:id="@+id/moreInfoPD"
             android:layout_width="match_parent"

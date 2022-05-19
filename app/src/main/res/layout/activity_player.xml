@@ -58,7 +58,7 @@
         android:layout_height="250dp"
         android:layout_margin="10dp"
         android:padding="5dp"
-        android:src="@drawable/music_player_icon_slash_screen"
+        android:src="@drawable/img"
         app:shapeAppearanceOverlay="@style/curved"
         app:strokeColor="@color/cool_blue"
         app:strokeWidth="5dp"/>

@@ -78,7 +78,6 @@ private val selectionActivity: Boolean = false)
                     binder.detailsTV.setTextColor(Color.WHITE)
                     binder.root.setBackgroundColor(Color.TRANSPARENT)
                     val dDialog = MaterialAlertDialogBuilder(context)
-//                        .setBackground(ColorDrawable(0x99000000.toInt()))
                         .setView(detailsDialog)
                         .setPositiveButton("OK"){self, _ -> self.dismiss()}
                         .setCancelable(false)

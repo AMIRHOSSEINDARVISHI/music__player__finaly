@@ -13,7 +13,7 @@
         android:id="@+id/playlistImg"
         android:layout_width="170dp"
         android:layout_height="130dp"
-        android:src="@drawable/music_player_icon_slash_screen"
+        android:src="@drawable/img"
         app:shapeAppearanceOverlay="@style/curved"
         android:contentDescription="@string/song_img"/>
     <TextView
