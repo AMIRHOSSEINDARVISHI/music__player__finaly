@@ -68,7 +68,7 @@ class PlayerActivity : AppCompatActivity(), ServiceConnection, MediaPlayer.OnCom
             musicListPA.add(getMusicDetails(intent.data!!))
             Glide.with(this)
                 .load(getImgArt(musicListPA[songPosition].path))
-                .apply(RequestOptions().placeholder(R.drawable.music_player_icon_slash_screen).centerCrop())
+                .apply(RequestOptions().placeholder(R.drawable.img).centerCrop())
                 .into(binding.songImgPA)
             binding.songNamePA.text = musicListPA[songPosition].title
         }
@@ -203,7 +203,7 @@ class PlayerActivity : AppCompatActivity(), ServiceConnection, MediaPlayer.OnCom
         fIndex = favouriteChecker(musicListPA[songPosition].id)
         Glide.with(applicationContext)
             .load(musicListPA[songPosition].artUri)
-            .apply(RequestOptions().placeholder(R.drawable.music_player_icon_slash_screen).centerCrop())
+            .apply(RequestOptions().placeholder(R.drawable.img).centerCrop())
             .into(binding.songImgPA)
         binding.songNamePA.text = musicListPA[songPosition].title
         if(repeat) binding.repeatBtnPA.setColorFilter(ContextCompat.getColor(applicationContext, R.color.purple_500))
@@ -217,7 +217,7 @@ class PlayerActivity : AppCompatActivity(), ServiceConnection, MediaPlayer.OnCom
         } else {
             BitmapFactory.decodeResource(
                 resources,
-                R.drawable.music_player_icon_slash_screen
+                R.drawable.img
             )
         }
         val bgColor = getMainColor(image)
@@ -301,7 +301,7 @@ class PlayerActivity : AppCompatActivity(), ServiceConnection, MediaPlayer.OnCom
         NowPlaying.binding.songNameNP.isSelected = true
         Glide.with(applicationContext)
             .load(musicListPA[songPosition].artUri)
-            .apply(RequestOptions().placeholder(R.drawable.music_player_icon_slash_screen).centerCrop())
+            .apply(RequestOptions().placeholder(R.drawable.img).centerCrop())
             .into(NowPlaying.binding.songImgNP)
         NowPlaying.binding.songNameNP.text = musicListPA[songPosition].title
     }

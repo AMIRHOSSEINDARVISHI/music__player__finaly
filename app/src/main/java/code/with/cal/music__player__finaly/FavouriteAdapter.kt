@@ -33,7 +33,7 @@ class FavouriteAdapter(private val context: Context, private var musicList: Arra
         holder.name.text = musicList[position].title
         Glide.with(context)
             .load(musicList[position].artUri)
-            .apply(RequestOptions().placeholder(R.drawable.music_player_icon_slash_screen).centerCrop())
+            .apply(RequestOptions().placeholder(R.drawable.img).centerCrop())
             .into(holder.image)
 
         //زمان که دکمه بعدی رو میزنه چیکار کنه

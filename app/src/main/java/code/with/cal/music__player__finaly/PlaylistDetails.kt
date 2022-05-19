@@ -75,7 +75,7 @@ class PlaylistDetails : AppCompatActivity() {
         {
             Glide.with(this)
                 .load(PlaylistActivity.musicPlaylist.ref[currentPlaylistPos].playlist[0].artUri)
-                .apply(RequestOptions().placeholder(R.drawable.music_player_icon_slash_screen).centerCrop())
+                .apply(RequestOptions().placeholder(R.drawable.img).centerCrop())
                 .into(binding.playlistImgPD)
             binding.shuffleBtnPD.visibility = View.VISIBLE
         }

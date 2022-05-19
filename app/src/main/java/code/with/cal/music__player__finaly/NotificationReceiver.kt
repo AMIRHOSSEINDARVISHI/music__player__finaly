@@ -38,12 +38,12 @@ class NotificationReceiver:BroadcastReceiver() {
         PlayerActivity.musicService!!.createMediaPlayer()
         Glide.with(context)
             .load(PlayerActivity.musicListPA[PlayerActivity.songPosition].artUri)
-            .apply(RequestOptions().placeholder(R.drawable.music_player_icon_slash_screen).centerCrop())
+            .apply(RequestOptions().placeholder(R.drawable.img).centerCrop())
             .into(PlayerActivity.binding.songImgPA)
         PlayerActivity.binding.songNamePA.text = PlayerActivity.musicListPA[PlayerActivity.songPosition].title
         Glide.with(context)
             .load(PlayerActivity.musicListPA[PlayerActivity.songPosition].artUri)
-            .apply(RequestOptions().placeholder(R.drawable.music_player_icon_slash_screen).centerCrop())
+            .apply(RequestOptions().placeholder(R.drawable.img).centerCrop())
             .into(NowPlaying.binding.songImgNP)
         NowPlaying.binding.songNameNP.text = PlayerActivity.musicListPA[PlayerActivity.songPosition].title
         playMusic()
